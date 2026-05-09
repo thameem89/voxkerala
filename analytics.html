@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Analytics | VoxKerala Live Poll Platform</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="font-body-md overflow-x-hidden">
+    <!-- Background Texture -->
+    <div class="fixed inset-0 mural-texture pointer-events-none z-0"></div>
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-surface-container-low/95 backdrop-blur-md border-b-[0.5px] border-secondary/20">
+      <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+        <div class="flex items-center gap-4">
+          <a href="/" class="flex items-center gap-4">
+            <div class="h-10 w-10 text-secondary">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full drop-shadow-[0_0_8px_rgba(246,190,57,0.4)]">
+                <path d="M45 10C42 15 40 25 42 35C44 45 50 55 48 65C46 75 40 85 45 90C50 95 55 90 60 85C65 80 62 70 60 60C58 50 55 40 58 30C61 20 65 15 60 10C55 5 50 5 45 10Z" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="font-display-lg text-headline-sm md:text-headline-md tracking-tight text-primary">VoxKerala</h1>
+              <p class="font-body-md text-label-caps text-on-surface-variant uppercase tracking-widest opacity-70">The Voice of God's Own Country</p>
+            </div>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <nav class="flex items-center gap-8">
+            <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="/">Poll Feed</a>
+            <a class="text-primary font-bold border-b-2 border-primary py-1 transition-all" href="/analytics.html">Analytics</a>
+            <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors" href="/archives.html">Archives</a>
+          </nav>
+          <div class="flex items-center gap-2 px-4 py-1.5 bg-primary-container/20 rounded-full border border-primary/30">
+            <span class="w-2 h-2 rounded-full bg-red-600 pulsing-red"></span>
+            <span class="font-label-caps text-primary">LIVE POLL</span>
+          </div>
+          <button id="settings-btn" class="material-symbols-outlined text-secondary hover:rotate-90 transition-transform cursor-pointer">settings</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative z-10 max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+      <section class="mb-16 text-center">
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight max-w-4xl mx-auto">
+          Deep Dive Analytics
+        </h2>
+        <div class="gold-divider max-w-2xl mx-auto opacity-40 mb-12"></div>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-surface-container-high rounded-xl p-8 border border-white/5">
+          <h3 class="font-headline-sm text-secondary mb-4">Demographic Trends</h3>
+          <p class="font-body-md text-on-surface-variant mb-6">Detailed breakdown of voter demographics across different age groups and professional sectors.</p>
+          <div class="space-y-4">
+            <div class="h-24 bg-surface-container rounded-lg border border-white/5 flex items-center justify-center italic opacity-50">Chart Visualization Placeholder</div>
+          </div>
+        </div>
+        <div class="bg-surface-container-high rounded-xl p-8 border border-white/5">
+          <h3 class="font-headline-sm text-secondary mb-4">Sentiment Analysis</h3>
+          <p class="font-body-md text-on-surface-variant mb-6">Real-time sentiment tracking from social media and platform comments.</p>
+          <div class="space-y-4">
+            <div class="h-24 bg-surface-container rounded-lg border border-white/5 flex items-center justify-center italic opacity-50">Trend Line Placeholder</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-surface-container-lowest border-t-[0.5px] border-secondary/10 relative z-10 pb-20 md:pb-12">
+      <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-container-max-width mx-auto">
+        <div class="mb-8 md:mb-0 max-w-xl">
+          <h3 class="font-display-lg text-headline-sm text-on-surface mb-2">VoxKerala</h3>
+          <p class="font-body-md text-on-surface-variant opacity-70 mb-4">
+            © 2024 VoxKerala. Editorial Metadata & Disclaimers Apply.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-sm" href="/privacy.html">Privacy Policy</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-sm" href="/terms.html">Terms of Service</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-sm" href="/methodology.html">Methodology</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-surface-container-low/95 backdrop-blur-md border-t-[0.5px] border-secondary/20 shadow-2xl rounded-t-xl">
+      <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="/">
+        <span class="material-symbols-outlined">bolt</span>
+        <span class="font-label-caps text-[10px]">Live</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="/archives.html">
+        <span class="material-symbols-outlined">local_fire_department</span>
+        <span class="font-label-caps text-[10px]">Trending</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="/map.html">
+        <span class="material-symbols-outlined">map</span>
+        <span class="font-label-caps text-[10px]">Map</span>
+      </a>
+      <a class="admin-btn flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+        <span class="material-symbols-outlined">settings_applications</span>
+        <span class="font-label-caps text-[10px]">Admin</span>
+      </a>
+    </nav>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-low": "#1a1a2e",
+                "secondary": "#f6be39",
+                "primary": "#ffb4a9",
+                "background": "#111125",
+                "surface-container-high": "#28283d",
+                "surface-container": "#1e1e32",
+                "on-surface": "#e2e0fc",
+                "on-surface-variant": "#e1bfb9",
+            },
+            "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "container-max-width": "1440px"
+            },
+            "fontFamily": {
+                "display-lg": ["Playfair Display"],
+                "headline-sm": ["Playfair Display"],
+                "body-md": ["Manrope"],
+                "label-caps": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+  </body>
+</html>
