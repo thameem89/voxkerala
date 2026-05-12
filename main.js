@@ -121,15 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update Regional Breakdown (Top 3)
+        // Update Regional Breakdown (All Districts)
         const districtCounts = {};
+        districts.forEach(d => districtCounts[d] = 0);
         votes.forEach(v => {
-            districtCounts[v.district] = (districtCounts[v.district] || 0) + 1;
+            if (districtCounts[v.district] !== undefined) {
+                districtCounts[v.district]++;
+            } else {
+                districtCounts[v.district] = 1;
+            }
         });
 
         const sortedDistricts = Object.entries(districtCounts)
-            .sort((a, b) => b[1] - a[1])
-            .slice(0, 3);
+            .sort((a, b) => b[1] - a[1]);
 
         if (districtBreakdown) {
             districtBreakdown.innerHTML = sortedDistricts.map(([name, count]) => `
